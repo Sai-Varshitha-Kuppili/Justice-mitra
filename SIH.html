@@ -1,0 +1,261 @@
+<html>
+<head>
+    <title>Department of Justice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .chatbot-modal {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            max-width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .chatbot-modal-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .chatbot-modal-body {
+            padding: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .chatbot-modal-footer {
+            padding: 10px;
+            text-align: right;
+        }
+
+        .chatbot-modal-close {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        #icon-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #icon-container i {
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body class="font-sans">
+    <header class="bg-gray-100 text-gray-800">
+        <div class="container mx-auto flex justify-between items-center py-2">
+            <div class="text-sm">
+                <span>विधि और न्याय मंत्रालय, भारत सरकार</span> | MINISTRY OF LAW AND JUSTICE, GOVERNMENT OF INDIA
+            </div>
+            <div class="flex items-center space-x-4">
+                <a class="text-sm" href="#">SKIP TO MAIN CONTENT</a>
+                <a class="text-sm" href="#"><i class="fas fa-search"></i></a>
+                <a class="text-sm" href="#"><i class="fas fa-comments"></i></a>
+                <a class="text-sm" href="#"><i class="fas fa-sitemap"></i></a>
+                <a class="text-sm" href="#"><i class="fas fa-universal-access"></i></a>
+                <a class="text-sm" href="#">ENGLISH</a>
+            </div>
+        </div>
+    </header>
+    <div class="bg-white">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <div class="flex items-center space-x-4">
+                <img src="https://doj.gov.in/wp-content/themes/sdo-theme/images/emblem.svg" alt="Government of India Emblem" class="h-12" width="50" height="50">
+                <div>
+                    <div class="text-sm">न्याय विभाग</div>
+                    <div class="text-2xl font-bold">DEPARTMENT OF JUSTICE</div>
+                    <div class="text-xs">सत्यमेव जयते</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <img src="https://cdnbbsr.s3waas.gov.in/s35d6646aad9bcc0be55b2c82f69750387/uploads/2022/11/2022112837.png" alt="G20 Logo" class="h-12" width="100" height="50">
+                <img src="https://cdnbbsr.s3waas.gov.in/s35d6646aad9bcc0be55b2c82f69750387/uploads/2021/08/2021081941.png" alt="Azadi Ka Amrit Mahotsav Logo" class="h-12" width="100" height="50">
+            </div>
+        </div>
+    </div>
+    <nav class="bg-gray-200">
+        <div class="container mx-auto flex justify-between items-center py-2">
+            <div class="flex space-x-4">
+                <a href="#" class="bg-yellow-500 text-white px-4 py-2">Home</a>
+                <div class="relative group">
+                    <a href="#" class="px-4 py-2">About Us</a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <a href="#" class="px-4 py-2">Administration of Justice</a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <a href="#" class="px-4 py-2">National Mission</a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <a href="#" class="px-4 py-2">eCourts MMP</a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <a href="#" class="px-4 py-2">Access to Justice</a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <a href="#" class="px-4 py-2">Samvidhan@75</a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg">
+                    </div>
+                </div>
+                <div class="relative group">
+                    <a href="#" class="px-4 py-2">Media Corner</a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="#" class="px-4 py-2"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="relative">
+            <img src="https://cdnbbsr.s3waas.gov.in/s35d6646aad9bcc0be55b2c82f69750387/uploads/2024/01/202401311470908657.png" alt="Har Ghar Tiranga Banner" class="w-full" width="1200" height="400">
+            <div class="absolute bottom-0 left-0 bg-yellow-500 text-white w-full py-2 flex justify-between items-center">
+                <div class="px-4">Latest News</div>
+                <div class="flex space-x-4 px-4">
+                    <a href="#">Formation of Internal Complaints Committee (ICC) in the Department of Justice.</a>
+                    <a href="#">Call for Proposals under "Scheme for Action Research and...</a>
+                </div>
+                <div class="flex space-x-2 px-4">
+                    <a href="#"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#"><i class="fas fa-pause"></i></a>
+                    <a href="#"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chatbot Button -->
+<button class="chatbot-button" onclick="toggleChatbot()">
+    <i class="fas fa-comments"></i>
+</button>
+
+<!-- Chatbot Icons -->
+<div id="chatbotIcons" class="chatbot-icons" style="display: none;">
+    <div class="icon-container">
+        <i class="fas fa-search icon" onclick="openWindow('search')"></i>
+    </div>
+    <div class="icon-container">
+        <i class="fas fa-sitemap icon" onclick="openWindow('sitemap')"></i>
+    </div>
+    <div class="icon-container">
+        <i class="fas fa-universal-access icon" onclick="openWindow('accessibility')"></i>
+    </div>
+</div>
+
+<script>
+    function toggleChatbot() {
+        var icons = document.getElementById('chatbotIcons');
+        if (icons.style.display === 'none' || icons.style.display === '') {
+            icons.style.display = 'flex';
+        } else {
+            icons.style.display = 'none';
+        }
+    }
+
+    function openWindow(type) {
+        var windowWidth = 400;
+        var windowHeight = 300;
+        var windowLeft = (screen.width - windowWidth) / 2;
+        var windowTop = (screen.height - windowHeight) / 2;
+
+        switch (type) {
+            case 'search':
+                var searchWindow = window.open('search.html', 'Search', 'width=' + windowWidth + ',height=' + windowHeight + ',left=' + windowLeft + ',top=' + windowTop + ',resizable=yes,scrollbars=yes');
+                break;
+            case 'sitemap':
+                var sitemapWindow = window.open('sitemap.html', 'Sitemap', 'width=' + windowWidth + ',height=' + windowHeight + ',left=' + windowLeft + ',top=' + windowTop + ',resizable=yes,scrollbars=yes');
+                break;
+            case 'accessibility':
+                var accessibilityWindow = window.open('accessibility.html', 'Accessibility', 'width=' + windowWidth + ',height=' + windowHeight + ',left=' + windowLeft + ',top=' + windowTop + ',resizable=yes,scrollbars=yes');
+                break;
+        }
+    }
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "iHL_N1XHng5wpJtm8joFO",
+        domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="iHL_N1XHng5wpJtm8joFO"
+        domain="www.chatbase.co"
+        defer>
+    </script>
+</script>
+<style>
+    .chatbot-icons {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-container {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #4CAF50;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .icon-container:hover {
+        background-color: #3e8e41;
+    }
+
+    .icon {
+        font-size: 24px;
+    }
+</style>
+
+</body>
+</html>
